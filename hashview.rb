@@ -27,7 +27,7 @@ if isOldVersion?
 end
 
 # Check for valid session before proccessing
-before /^(?!\/(login|register|logout|v1\/))/ do
+before /^(?!\/(analytics|login|register|logout|v1\/))/ do
   @settings = Settings.first
   if !validSession?
     redirect to('/login')

@@ -5,6 +5,9 @@ require 'json'
 get '/analytics' do
   varWash(params)
   
+  @settings = Settings.first
+  @settings['ui_themes'] = "Dark"
+  
   @customer_id = params[:customer_id]
   @hashfile_id = params[:hashfile_id]
   @button_select_customers = Customers.all(order: [:name.asc])
