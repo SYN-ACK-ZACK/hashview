@@ -6,7 +6,7 @@ get '/analytics' do
   varWash(params)
   
   @settings = Settings.first
-  @settings['ui_themes'] = "Dark"
+  @settings['ui_themes'] = "Light"
   
   @customer_id = params[:customer_id]
   @hashfile_id = params[:hashfile_id]
